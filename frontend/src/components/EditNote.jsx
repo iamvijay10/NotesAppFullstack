@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import axioInstance from "../api/Axiosinstance";
-// import axiosInstance from "../api/Axiosinstance";
 
 function EditNote() {
   const { id } = useParams();

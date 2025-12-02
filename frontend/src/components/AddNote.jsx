@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axioInstance from "../api/Axiosinstance";
-// import axiosInstance from "../api/Axiosinstance";
 
 function AddNote() {
   const [title, setTitle] = useState("");

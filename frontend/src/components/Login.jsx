@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/image.png";
-import axioInstance from "../api/axiosinstance";
+import axioInstance from "../api/Axiosinstance";
 import toast from "react-hot-toast";
 
 export default function Login() {
