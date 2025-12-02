@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import axioInstance from "../api/Axiosinstance";
+import axiosInstance from "../api/Axiosinstance";
+// import axioInstance from "../api/Axiosinstance";
 
 function EditNote() {
   const { id } = useParams();
@@ -11,7 +12,7 @@ function EditNote() {
   // Load existing note
   const fetchNote = async () => {
     try {
-      const res = await axioInstance.get(`/notes/${id}/`);
+      const res = await axiosInstance.get(`/notes/${id}/`);
       setTitle(res.data.title);
       setContent(res.data.content);
     } catch (err) {

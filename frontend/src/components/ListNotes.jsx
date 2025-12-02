@@ -1,7 +1,8 @@
 import { Edit, Trash2, Plus } from "lucide-react";
 // import axiosInstance from "../api/Axiosinstance";
 import { useEffect, useState } from "react";
-import axioInstance from "../api/Axiosinstance";
+import axiosInstance from "../api/Axiosinstance";
+// import axioInstance from "../api/Axiosinstance";
 // import axioInstance from "../api/Axiosinstance";
 
 function ListNotes() {
@@ -10,7 +11,7 @@ function ListNotes() {
 
   const loadNotes = async () => {
     try {
-      const response = await axioInstance.get("/notes");
+      const response = await axiosInstance.get("/notes");
       console.log(response,"response")
       setNotes(response.data);
     } catch(err){

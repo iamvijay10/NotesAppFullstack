@@ -1,12 +1,12 @@
 import axios from "axios";
 import {ACCESS_TOKEN} from "../constants"
 
-const axioInstance=axios.create({
+const axiosInstance=axios.create({
     baseURL:import.meta.env.VITE_API_URL
 });
 
 
-axioInstance.interceptors.request.use(
+axiosInstance.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem(ACCESS_TOKEN);
     console.log(token ,"TOKEN FROM AXIOS INSTANCE PAGE")
@@ -20,4 +20,4 @@ axioInstance.interceptors.request.use(
   }
 );
 
-export default axioInstance;
+export default axiosInstance;

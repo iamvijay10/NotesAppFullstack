@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axioInstance from "../api/Axiosinstance";
+import axiosInstance from "../api/Axiosinstance";
+// import axioInstance from "../api/Axiosinstance";
 
 
 
@@ -12,7 +13,7 @@ function AddNote() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axioInstance.post("/notes/", {
+      await axiosInstance.post("/notes/", {
         title,
         content,
       });

@@ -3,7 +3,8 @@ import logo from "../assets/image.png";
 import toast from "react-hot-toast"
 // import { use } from "react";
 import{useNavigate} from 'react-router-dom'
-import axioInstance from "../api/Axiosinstance";
+import axiosInstance from "../api/Axiosinstance";
+// import axioInstance from "../api/Axiosinstance";
 
 
 
@@ -17,7 +18,7 @@ const navigate=useNavigate();
   const handleSubmit = async(e) => {
     e.preventDefault();
     try{
-      const response=await axioInstance.post("/register/",{
+      const response=await axiosInstance.post("/register/",{
         username,
         password,
       });

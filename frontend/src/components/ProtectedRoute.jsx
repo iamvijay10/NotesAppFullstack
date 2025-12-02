@@ -3,6 +3,7 @@ import { jwtDecode } from "jwt-decode";
 import { REFRESH_TOKEN ,ACCESS_TOKEN} from "../constants"
 import { useEffect, useState } from "react"
 import axioInstance from "../api/Axiosinstance";
+import axiosInstance from "../api/Axiosinstance";
 
 
 
@@ -17,7 +18,7 @@ function ProtectedRoute({children}){
     const refreshToken= async () =>{
         const refreshT= localStorage.getItem(REFRESH_TOKEN)
         try{
-            const res= await axioInstance.post("/token/refresh/",{
+            const res= await axiosInstance.post("/token/refresh/",{
                 refresh:refreshT
             })
             if(res.status===200){

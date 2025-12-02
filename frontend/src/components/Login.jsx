@@ -2,8 +2,9 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import logo from "../assets/image.png";
-import axioInstance from "../api/Axiosinstance";
+// import axioInstance from "../api/Axiosinstance";
 import toast from "react-hot-toast";
+import axiosInstance from "../api/Axiosinstance";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -13,7 +14,7 @@ const navigate=useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      const response=await axioInstance.post("/login/",{
+      const response=await axiosInstance.post("/login/",{
         username,
         password,
       });
