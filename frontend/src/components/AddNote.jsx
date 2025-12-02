@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import axioInstance from "../api/Axiosinstance";
-import axioInstance from "../api/Axiosinstance.jsx";
+import axioInstance from "../api/Axiosinstance";
+
 
 
 function AddNote() {

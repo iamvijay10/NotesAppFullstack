@@ -2,6 +2,7 @@ import { Edit, Trash2, Plus } from "lucide-react";
 // import axiosInstance from "../api/Axiosinstance";
 import { useEffect, useState } from "react";
 import axioInstance from "../api/Axiosinstance";
+// import axioInstance from "../api/Axiosinstance";
 
 function ListNotes() {
 
